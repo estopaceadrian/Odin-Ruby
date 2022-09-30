@@ -1,12 +1,15 @@
 def display_current_inventory(inventory_list)
   # use #each to iterate through each item of the inventory_list (a hash)
   # use puts to output each list item "<key>, quantity: <value>" to console
+ inventory_list.each { |key, value| puts"#{key}, quantity: #{value}"}
+
 end
 
 def display_guess_order(guesses)
   # use #each_with_index to iterate through each item of the guesses (an array)
   # use puts to output each list item "Guess #<number> is <item>" to console
   # hint: the number should start with 1
+  guesses.each_with_index { |item, number| puts "Guess ##{number} is #{item}"  }
 end
 
 def find_absolute_values(numbers)
